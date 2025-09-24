@@ -40,6 +40,8 @@
      font-size: 40px;
      color: black;
      text-align: center;
+     display: block; color: #ffd43a;
+     background-color: black
 }
     .horizontal-list li {
       display: inline-block;
