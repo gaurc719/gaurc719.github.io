@@ -1,0 +1,53 @@
+    body {
+      background-image: url("/Users/chinmayigaur/Desktop/interaction/lava bg.png");
+    }
+.rage-font {
+  font-family: "grante", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 200px;
+  color: white;
+  text-align: center;
+}
+.Word-Breaker {
+     font-family: "p22-mucha", sans-serif;
+     font-weight: 500;
+     font-style: normal;
+     font-size: 70px;
+     color: black;
+     text-align: center;
+}
+.Brain-Itch {
+     font-family: "p22-mucha", sans-serif;
+     font-weight: 500;
+     font-style: normal;
+     font-size: 70px;
+     color: black;
+     text-align: center;
+}
+.Music {
+     font-family: "p22-mucha", sans-serif;
+     font-weight: 500;
+     font-style: normal;
+     font-size: 70px;
+     color: black;
+     text-align: center;
+}
+.about-text {
+     font-family: "fiona", sans-serif;
+     font-weight: 400;
+     font-style: normal;
+     font-size: 40px;
+     color: black;
+     text-align: center;
+}
+    .horizontal-list li {
+      display: inline-block;
+      margin-right: 152px;
+    }
+
+    .horizontal-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
