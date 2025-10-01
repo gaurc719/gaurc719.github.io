@@ -26,35 +26,35 @@
 }
 
 .Brain-Itch {
-     font-family: "p22-mucha", sans-serif;
-     font-weight: 500;
-     font-style: normal;
-     font-size: 70px;
-     color: black;
-     text-align: center;
-     background-color:black;
-    padding:10px;
+  font-family: "p22-mucha", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 70px;
+  color: black;
+  text-align: center;
+  background-color:black;
+  padding:10px;
   display:inline-block;
   color:white;
   border: 5px solid pink;
   border-radius: 5px;
   text-decoration:none;
-     
 }
-.Music {
-     font-family: "p22-mucha", sans-serif;
-     font-weight: 500;
-     font-style: normal;
-     font-size: 70px;
-     color: black;
-     text-align: center;
-     background-color:black;
+
+.Music{
+    font-family: "p22-mucha", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 70px;
+    color: black;
+    text-align: center;
+    background-color:black;
     padding:10px;
-  display:inline-block;
-  color:white;
-  border: 5px solid pink;
-  border-radius: 5px;
-  text-decoration:none;
+    display:inline-block;
+    color:white;
+    border: 5px solid pink;
+    border-radius: 5px;
+    text-decoration:none;
 }
 .about-text {
      font-family: "fiona", sans-serif;
