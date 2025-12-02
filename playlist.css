@@ -1,0 +1,132 @@
+body {
+  background-color: #FFADCF;
+  text-align: center;
+  font-family: "p22-morris-golden", sans-serif;
+  padding-top: 120px;
+}
+
+/* Animated title */
+.wiggle {
+  font-family: "swung-note", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  color: white;
+  animation: wave 2s infinite ease-in-out;
+  
+}
+
+.wiggle-small {
+  animation: wave-small 2s infinite ease-in-out;
+}
+
+@keyframes wave {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes wave-small {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+.cute-button {
+  background-color: white;
+  border: none;
+  color: #FF4F8B;
+  padding: 20px 50px;
+  font-size: 26px;
+  border-radius: 40px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 6px 20px rgba(255, 0, 100, 0.3);
+  transition: 0.3s ease;
+  animation: float 2s infinite;
+}
+
+.cute-button:hover {
+  transform: scale(1.1);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.song-card {
+  margin-top: 50px;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 10px 25px rgba(255, 0, 100, 0.25);
+  animation: pop 0.6s ease-out;
+}
+
+.hidden {
+  display: none;
+}
+
+.thumbnail {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.song-title {
+  font-family: "swung-note", sans-serif;
+font-weight: 400;
+font-style: normal;
+font-size: 30px;
+  color: #FF4F8B;
+  margin: 0;
+}
+
+.song-artist {
+  font-family: "swung-note", sans-serif;
+font-weight: 400;
+font-style: normal;
+font-size: 30px;
+  color: #888;
+  margin: 5px 0 0 0;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.description-box {
+  width: 80%;
+  margin: 10px auto 20px auto;
+  padding: 12px 18px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 14px;
+  color: white;
+  font-size: 1.1rem;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* smooth fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Fullscreen background video */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1; /* pushes behind all content */
+  filter: brightness(0.55);
+}
+

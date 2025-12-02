@@ -1,0 +1,67 @@
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;    
+  z-index: -1;           
+}
+
+
+.tigershark-title {
+font-family: "chelsea-market-script", sans-serif;
+font-weight: 400;
+font-style: normal;
+  font-size: 70px;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 200px;
+  animation: floatText 3s ease-in-out infinite, colorPulse 5s ease-in-out infinite;
+}
+
+
+@keyframes floatText {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes colorPulse {
+  0%, 100% { color: #ffffff; }
+  30% { color: black; }
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.video-box {
+  display: inline-block;
+  width: 300px;
+  border: 3px solid white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  animation: float 3s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+.video-box:hover {
+  animation-play-state: paused;
+  transform: scale(1.05);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+video {
+  width: 100%;
+  display: block;
+}

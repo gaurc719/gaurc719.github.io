@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-y: auto;
+  background-color: #ffadcf;
+}
+
+.cat-title {
+  font-family: "p22-morris-golden", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 70px;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 200px;
+  animation: floatText 3s ease-in-out infinite, colorPulse 5s ease-in-out infinite;
+}
+
+@keyframes floatText {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes colorPulse {
+  0%, 100% { color: #ffffff; }
+  30% { color: #ffd43a; }
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.video-box {
+  display: inline-block;
+  width: 300px;
+  border: 3px solid white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  animation: float 3s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+.video-box:hover {
+  animation-play-state: paused;
+  transform: scale(1.05);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+video {
+  width: 100%;
+  display: block;
+}
+
+
+.controls {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#colorPicker {
+    width: 40px;
+    height: 40px;
+    border: none;
+    padding: 0;
+}
+
+#clearBtn {
+    padding: 8px 15px;
+    background: #ff4444;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+#clearBtn:hover {
+    background: #cc0000;
+}
+
+#notepadSection {
+    margin: 40px auto;
+    margin-top: 60px;
+    background: #f5e6c8;
+    width: 60%;
+    max-width: 700px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+#notepadSection h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+#colorPicker {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: none;
+}
+
+#clearBtn {
+    padding: 8px 15px;
+    background: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+#clearBtn:hover {
+    background: #b52b27;
+}
+
+#notepad {
+    width: 100%;
+    height: 200px;
+    background: #fffaf0;
+    color: #000;
+    border: 2px solid #d4c1a3;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+    resize: vertical;
+}
+#messageBox {
+  margin-top: 30px;
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1s ease;
+}

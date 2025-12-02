@@ -1,3 +1,12 @@
+@keyframes floatLoop {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
     body {
       background-image: url("lava bg.png");
     }
@@ -24,115 +33,147 @@
   transform 2s ease,
   color 2s ease;   
 }
-.Word-Breaker {
-     font-family: "p22-mucha", sans-serif;
-     font-weight: 500;
-     font-style: normal;
-     font-size: 70px;
-     color: black;
-     text-align: center;
-    background-color:black;
-    padding:10px;
-  display:inline-block;
-  color:white;
-  border: 5px solid pink;
-  border-radius: 5px;
-  text-decoration:none;
-}
-.Word-Breaker:hover {
-     font-family: "p22-mucha", sans-serif;
-     font-weight: 500;
-     font-style: normal;
-     font-size: 70px;
-     color: black;
-     text-align: center;
-    background-color:solid pink;
-    padding:10px;
-  display:inline-block;
-  color:white;
-  border: 5px black;
-  border-radius: 10px;
-  text-decoration:none;
-  transition: 3s
-}
 
-.Brain-Itch {
-  font-family: "p22-mucha", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 70px;
-  color: black;
+body {
+  background-image: url("lava bg.png");
+  background-repeat: repeat;
+background-size: 250px; 
   text-align: center;
-  background-color:black;
-  padding:10px;
-  display:inline-block;
-  color:white;
-  border: 5px solid pink;
-  border-radius: 5px;
-  text-decoration:none;
-}
-.Brain-Itch:hover {
-     font-family: "p22-mucha", sans-serif;
-     font-weight: 500;
-     font-style: normal;
-     font-size: 70px;
-     color: black;
-     text-align: center;
-    background-color:solid pink;
-    padding:10px;
-  display:inline-block;
-  color:white;
-  border: 5px black;
-  border-radius: 10px;
-  text-decoration:none;
-  transition: 3s
+  margin: 0;
+  padding: 0;
 }
 
-.Music{
-    font-family: "p22-mucha", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 70px;
-    color: black;
-    text-align: center;
-    background-color:black;
-    padding:10px;
-    display:inline-block;
-    color:white;
-    border: 5px solid pink;
-    border-radius: 5px;
-    text-decoration:none;
+.rage-font {
+  font-family: "grante", sans-serif;
+  font-weight: 800;
+  font-size: 100px;
+  text-align: center;
+  margin-top: 50px;
+  color: #ffd43a;
+
+  /* BOX */
+  display: inline-block;
+padding: 10px 10px;
+  background-color: black;
+  border: 5px solid #ffd43a;
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(255, 212, 58, 0.6);
+
+  transform: scaleX(1.1);
+  transition: all 2s ease;
 }
-.Music:hover {
-     font-family: "p22-mucha", sans-serif;
-     font-weight: 500;
-     font-style: normal;
-     font-size: 70px;
-     color: black;
-     text-align: center;
-    background-color:solid pink;
-    padding:10px;
-  display:inline-block;
-  color:white;
-  border: 5px black;
+
+.rage-font:hover {
+  transform: scaleX(1.1);
+  color: #ffd43a;
+}
+
+.tab {
+  font-family: "argent-pixel-cf", sans-serif;
+  font-size: 60px;
+  background-color: black;
+  color: white;
+  border: 5px solid pink;
   border-radius: 10px;
-  text-decoration:none;
-  transition: 3s
+  padding: 10px 25px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 25px;
+  animation: floatLoop 3s ease-in-out infinite;
+  transition: all 0.4s ease;
+}
+
+.tab:hover {
+  animation-play-state: paused;
+  transform: scale(1.1);
+  box-shadow: 0 0 25px pink;
+  cursor: pointer;
+}
+
+.tab:nth-child(even) {
+  animation-direction: reverse;
 }
 
 .about-text {
-     font-family: "fiona", sans-serif;
-     font-weight: 400;
-     font-style: normal;
-     font-size: 40px;
-     color: black;
-     text-align: center;
-     display: block; color: #ffd43a;
-     background-color: black
+  font-family: "fiona", sans-serif;
+  font-weight: 400;
+  font-size: 35px;
+  color: #ffd43a;
+  text-align: center;
+  background-color: black;
+  padding: 30px;
+  margin: 50px auto;
+  width: 70%;
+  border-radius: 20px;
 }
-    .horizontal-list div{
-      list-style: none;
-      padding: 0;
-      margin: 50px;
-      display: inline-block;
-    }
+
+.horizontal-list a {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid white;       /* initial border color */
+  text-decoration: none;
+  margin-bottom: 20px;
+  background-color: black;        /* normal background */
+  color: white;                   /* normal text color */
+  font-family: "argent-pixel-cf", sans-serif; /* keeps your font */
+  font-size: 40px;                /* keeps size */
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.horizontal-list a:hover {
+  background-color: white;        /* inverted background */
+  color: black;                   /* inverted text */
+  border-color: black;            /* optional: invert border */
+  transform: scale(1.05);         /* optional zoom effect */
+  /* font-family and font-size are NOT changed */
+}
+.horizontal-list {
+  display: grid;
+  grid-template-columns: repeat(2, 900px);
+  justify-content: justify;
+  gap: 20px;                
+  margin-top: 30px;
+  margin-left: 150px;                        
+}
+
+.horizontal-list div {
+  display: flex;
+  justify-content: justify;
+}
+.running-header {
+  font-family: "argent-pixel-cf", sans-serif;  /* same font as boxes */
+  font-size: 15px;
+  color: white;
+  background-color: black;
+  padding: 10px 0;
+  white-space: nowrap;          /* prevents text from wrapping */
+  overflow: hidden;             /* hides overflow */
+  border-bottom: 3px solid white;
+}
+
+.running-header {
+  position: fixed;              /* sticks to top of screen */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  overflow: hidden;
+  border-bottom: 3px solid white;
+  z-index: 9999;                /* ensures it stays on top */
+  padding: 10px 0;
+}
+
+.running-header span {
+  display: inline-block;
+  font-family: "argent-pixel-cf", sans-serif; /* same font as your boxes */
+  font-size: 15px;
+  color: white;
+  white-space: nowrap;
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(100%); }   /* start offscreen right */
+  100% { transform: translateX(-100%); } /* end offscreen left */
+}
