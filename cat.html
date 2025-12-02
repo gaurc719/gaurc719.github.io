@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cats</title>
+  <link rel="stylesheet" href="cat.css">
+  <link rel="stylesheet" href="https://use.typekit.net/uuq7iqa.css">
+</head>
+<body>
+
+<h1 class="cat-title">Cat Videos</h1>
+  
+  <div class="video-container">
+    <div class="video-box">
+      <video controls poster="cat-video-1.png">
+        <source src="cat1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="video-box">
+      <video controls poster="cat-video-2.jpg">
+        <source src="cat2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="video-box">
+      <video controls poster="cat-video-3.png">
+        <source src="cat3.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+<div id="notepadSection">
+    <h2>Notes</h2>
+
+    <div class="controls">
+        <label for="colorPicker">Text Color:</label>
+        <input type="color" id="colorPicker" value="#000000">
+
+        <button id="clearBtn">Clear</button>
+        <button id="submitBtn">Submit</button>
+    </div>
+
+    <textarea id="notepad" placeholder="Vent here..."></textarea>
+</div>
+<div id="messageBox"></div>
+<script src="cat.js" defer></script>
+</body>
+</html>
