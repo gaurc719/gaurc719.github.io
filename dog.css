@@ -1,17 +1,28 @@
+/* ----------------------------
+   GLOBAL STYLES
+----------------------------- */
 body {
-  background-color: #87C3FF
+  background-color: #87C3FF;
 }
 
+video {
+  width: 100%;
+  display: block;
+}
+
+/* ----------------------------
+   TITLE ANIMATION
+----------------------------- */
 .dog-title {
-font-family: "filmotype-yukon", sans-serif;
-font-weight: 400;
-font-style: normal;
+  font-family: "filmotype-yukon", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 70px;
   color: #ffffff;
   text-align: center;
-  margin-bottom: 40px;
-  margin-top: 200px;
-  animation: floatText 3s ease-in-out infinite, colorPulse 5s ease-in-out infinite;
+  margin: 200px auto 40px;
+  animation: floatText 3s ease-in-out infinite,
+             colorPulse 5s ease-in-out infinite;
 }
 
 @keyframes floatText {
@@ -24,6 +35,22 @@ font-style: normal;
   30% { color: black; }
 }
 
+/* ----------------------------
+   BACKGROUND VIDEO
+----------------------------- */
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* ----------------------------
+   VIDEO CARD GRID
+----------------------------- */
 .video-container {
   display: flex;
   justify-content: center;
@@ -53,95 +80,74 @@ font-style: normal;
   50% { transform: translateY(-15px); }
 }
 
-video {
-  width: 100%;
-  display: block;
-}
-
-
-.controls {
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-#colorPicker {
-    width: 40px;
-    height: 40px;
-    border: none;
-    padding: 0;
-}
-
-#clearBtn {
-    padding: 8px 15px;
-    background: #ff4444;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 6px;
-}
-
-#clearBtn:hover {
-    background: #cc0000;
-}
-
+/* ----------------------------
+   NOTEPAD SECTION
+----------------------------- */
 #notepadSection {
-    margin: 40px auto;
-    margin-top: 60px;
-    background: #f5e6c8;
-    width: 60%;
-    max-width: 700px;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.3);
-    text-align: center;
+  margin: 60px auto;
+  background: #f5e6c8;
+  width: 60%;
+  max-width: 700px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  text-align: center;
 }
 
 #notepadSection h2 {
-    color: #333;
-    font-size: 24px;
-    margin-bottom: 15px;
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 15px;
 }
 
+/* ----------------------------
+   CONTROLS (COLOR PICKER + CLEAR)
+----------------------------- */
 .controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
 }
 
 #colorPicker {
-    width: 40px;
-    height: 40px;
-    border: none;
-    background: none;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: none;
+  padding: 0;
 }
 
 #clearBtn {
-    padding: 8px 15px;
-    background: #d9534f;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
-#clearBtn:hover {
-    background: #b52b27;
+  padding: 8px 15px;
+  background: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-#notepad {
-    width: 100%;
-    height: 200px;
-    background: #fffaf0;
-    color: #000;
-    border: 2px solid #d4c1a3;
-    border-radius: 8px;
-    padding: 12px;
-    font-size: 16px;
-    resize: vertical;
+#clearBtn:hover {
+  background: #b52b27;
 }
+
+/* ----------------------------
+   NOTEPAD INPUT
+----------------------------- */
+#notepad {
+  width: 100%;
+  height: 200px;
+  background: #fffaf0;
+  color: #000;
+  border: 2px solid #d4c1a3;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 16px;
+  resize: vertical;
+}
+
+
 #messageBox {
   margin-top: 30px;
   font-size: 26px;
