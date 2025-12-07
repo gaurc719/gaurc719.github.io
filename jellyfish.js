@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const submitBtn = document.getElementById("submitBtn");
   const notepad = document.getElementById("notepad");
   const messageBox = document.getElementById("messageBox");
-
   const messages = [
     "My self-worth is not determined by my accomplishments.",
     "There is no end destination on this self-love journey.",
@@ -37,13 +36,10 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   submitBtn.addEventListener("click", () => {
-    // Fade out notepad
     notepad.style.opacity = "0";
 
     setTimeout(() => {
       notepad.style.display = "none";
-
-      // Show random message
       const randomMessage =
         messages[Math.floor(Math.random() * messages.length)];
 
@@ -52,3 +48,25 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 900);
   });
 });
+const homeBtn = document.getElementById("homeBtn");
+const backToNotepad = document.getElementById("backToNotepad");
+
+submitBtn.addEventListener("click", () => {
+  setTimeout(() => {
+    backToNotepad.style.display = "inline-block";
+  }, 900);
+});
+
+backToNotepad.onclick = () => {
+  messageBox.style.opacity = "0";
+  setTimeout(() => {
+    messageBox.textContent = "";
+    notepad.style.display = "block";
+    notepad.style.opacity = "1";
+    backToNotepad.style.display = "none";
+  }, 500);
+};
+
+homeBtn.onclick = () => {
+  window.location.href = "index.html";
+};

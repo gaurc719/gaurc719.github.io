@@ -18,7 +18,7 @@
   <div class="video-container">
     <div class="video-box">
       <video controls poster="jellyfish-video-1.png">
-        <source src="jellyfish1.mp4" type="video/mp4">
+        <source src="jellyfish.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
@@ -44,13 +44,22 @@
     <div class="controls">
         <label for="colorPicker">Text Color:</label>
         <input type="color" id="colorPicker" value="#000000">
-
         <button id="clearBtn">Clear</button>
         <button id="submitBtn">Submit</button>
     </div>
 
     <textarea id="notepad" placeholder="Vent here..."></textarea>
 </div>
+
+<div id="messageBox"></div>
+
+<button id="backToNotepad" class="nav-btn" style="display:none;">
+  Back to Notepad
+</button>
+
+<button id="homeBtn" class="nav-btn">
+  Home
+</button>
 <div id="messageBox"></div>
 <script src="jellyfish.js" defer></script>
 </body>
