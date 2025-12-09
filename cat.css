@@ -153,3 +153,51 @@ video {
   opacity: 0;
   transition: opacity 1s ease;
 }
+.welcome-card {
+  width: 90%;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  padding: 16px 20px;
+  border: 2px solid #ffffff;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.15);
+
+  color: #ffffff;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.5;
+
+  animation: gentleFloat 3s ease-in-out infinite;
+}
+
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.nav-btn {
+  padding: 10px 20px;
+  background: #444444;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 16px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-btn:hover {
+  background: #222222;
+}

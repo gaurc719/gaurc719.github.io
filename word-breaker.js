@@ -1,21 +1,14 @@
 let debrisHeight = 0;
 
 document.getElementById("shatterBtn").onclick = function () {
-
-
-  document.body.style.backgroundImage = "none";
-  document.getElementById("bgVideo").style.display = "block";
-
-  const word = document.getElementById("wordInput").value;
+  const word = document.getElementById("wordInput").value.trim();
   const container = document.getElementById("container");
 
+  if (word === "") return;
 
   const row = document.createElement("div");
   row.className = "debris-row";
-
-
   row.style.bottom = debrisHeight + "px";
-
   debrisHeight += 50;
 
   container.appendChild(row);
@@ -32,8 +25,8 @@ document.getElementById("shatterBtn").onclick = function () {
 
   setTimeout(() => {
     letters.forEach(letter => {
-      let drift = (Math.random() - 0.5) * 80; 
-      letter.style.transform = `translate(${drift}px, 40px)`;  
+      let drift = (Math.random() - 0.5) * 80;
+      letter.style.transform = `translate(${drift}px, 40px)`;
     });
   }, 100);
 };

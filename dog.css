@@ -1,8 +1,8 @@
-/* ----------------------------
-   GLOBAL STYLES
------------------------------ */
+
 body {
   background-color: #87C3FF;
+  min-height: 100vh;
+  overflow-y: auto;
 }
 
 video {
@@ -10,9 +10,6 @@ video {
   display: block;
 }
 
-/* ----------------------------
-   TITLE ANIMATION
------------------------------ */
 .dog-title {
   font-family: "filmotype-yukon", sans-serif;
   font-weight: 400;
@@ -22,7 +19,7 @@ video {
   text-align: center;
   margin: 200px auto 40px;
   animation: floatText 3s ease-in-out infinite,
-             colorPulse 5s ease-in-out infinite;
+  colorPulse 5s ease-in-out infinite;
 }
 
 @keyframes floatText {
@@ -35,9 +32,6 @@ video {
   30% { color: black; }
 }
 
-/* ----------------------------
-   BACKGROUND VIDEO
------------------------------ */
 .bg-video {
   position: fixed;
   top: 0;
@@ -45,12 +39,9 @@ video {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  z-index: 0;
+  z-index: -1;
 }
 
-/* ----------------------------
-   VIDEO CARD GRID
------------------------------ */
 .video-container {
   display: flex;
   justify-content: center;
@@ -80,9 +71,7 @@ video {
   50% { transform: translateY(-15px); }
 }
 
-/* ----------------------------
-   NOTEPAD SECTION
------------------------------ */
+
 #notepadSection {
   margin: 60px auto;
   background: #f5e6c8;
@@ -100,9 +89,7 @@ video {
   margin-bottom: 15px;
 }
 
-/* ----------------------------
-   CONTROLS (COLOR PICKER + CLEAR)
------------------------------ */
+
 .controls {
   display: flex;
   justify-content: center;
@@ -155,4 +142,20 @@ video {
   text-align: center;
   opacity: 0;
   transition: opacity 1s ease;
+}
+
+.nav-btn {
+  padding: 10px 20px;
+  background: #444444;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 20px auto;
+  font-size: 16px;
+  display: block;
+}
+
+.nav-btn:hover {
+  background: #222222;
 }

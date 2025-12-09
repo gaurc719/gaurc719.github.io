@@ -7,13 +7,19 @@
   <link rel="stylesheet" href="https://use.typekit.net/uuq7iqa.css">
 </head>
 <body>
-
+    <video autoplay muted loop playsinline class="bg-video">
+  <source src="pinkbg.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 <h1 class="cat-title">Cat Videos</h1>
-  
+  <div class="welcome-card">
+  Welcome to the cat room! This is a personal space to lighten your mood. The cat room offers satisfying cat videos to destress. This is also a digital atmosphere for you to vent about your feelings and get manifestation.
+</div>
+
   <div class="video-container">
     <div class="video-box">
       <video controls poster="cat-video-1.png">
-        <source src="cat1.mp4" type="video/mp4">
+        <source src="cat-video-1.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
@@ -47,6 +53,11 @@
     <textarea id="notepad" placeholder="Vent here..."></textarea>
 </div>
 <div id="messageBox"></div>
+
+<button id="homeBtn" class="nav-btn" type="button">
+  Home
+</button>
+
 <script src="cat.js" defer></script>
 </body>
 </html>

@@ -3,6 +3,8 @@ body {
   text-align: center;
   font-family: "p22-morris-golden", sans-serif;
   padding-top: 120px;
+  min-height: 100vh;
+  overflow-y: auto;
 }
 
 /* Animated title */
@@ -128,5 +130,21 @@ font-size: 30px;
   object-fit: cover;
   z-index: -1; /* pushes behind all content */
   filter: brightness(0.55);
+}
+
+.nav-btn {
+  padding: 10px 20px;
+  background: #444444;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 20px auto;
+  font-size: 16px;
+  display: block;
+}
+
+.nav-btn:hover {
+  background: #222222;
 }
 

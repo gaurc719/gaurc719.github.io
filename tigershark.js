@@ -1,7 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const submitBtn = document.getElementById("submitBtn");
+  const notepadSection = document.getElementById("notepadSection");
   const notepad = document.getElementById("notepad");
   const messageBox = document.getElementById("messageBox");
+  const colorPicker = document.getElementById("colorPicker");
+  const clearBtn = document.getElementById("clearBtn");
+  const submitBtn = document.getElementById("submitBtn");
+  const backToNotepad = document.getElementById("backToNotepad");
+  const homeBtn = document.getElementById("homeBtn");
+
+  if (
+    !notepadSection ||
+    !notepad ||
+    !messageBox ||
+    !colorPicker ||
+    !clearBtn ||
+    !submitBtn ||
+    !backToNotepad ||
+    !homeBtn
+  ) {
+    return;
+  }
 
   const messages = [
     "My self-worth is not determined by my accomplishments.",
@@ -36,26 +54,56 @@ document.addEventListener("DOMContentLoaded", () => {
     "I practice gratitude for all that I have, and all that is yet to come."
   ];
 
-  submitBtn.addEventListener("click", () => {
-    // Fade out notepad
-    notepad.style.opacity = "0";
+  const hideNotepadSection = () => {
+    notepadSection.style.opacity = "0";
+    setTimeout(() => {
+      notepadSection.style.display = "none";
+    }, 900);
+  };
+
+  const showNotepadSection = () => {
+    notepadSection.style.display = "block";
+    requestAnimationFrame(() => {
+      notepadSection.style.opacity = "1";
+    });
+  };
+
+  const showRandomMessage = () => {
+    hideNotepadSection();
+
+    const randomMessage = messages[Math.floor(Math.random() * messages.length)];
 
     setTimeout(() => {
-      notepad.style.display = "none";
-
-      // Show random message
-      const randomMessage =
-        messages[Math.floor(Math.random() * messages.length)];
-
       messageBox.textContent = randomMessage;
       messageBox.style.opacity = "1";
+      backToNotepad.style.display = "inline-block";
     }, 900);
+  };
+
+  const resetToNotepad = () => {
+    messageBox.style.opacity = "0";
+    backToNotepad.style.display = "none";
+
+    setTimeout(() => {
+      messageBox.textContent = "";
+      showNotepadSection();
+    }, 500);
+  };
+
+  submitBtn.addEventListener("click", showRandomMessage);
+
+  clearBtn.addEventListener("click", () => {
+    notepad.value = "";
+    notepad.focus();
   });
 
-  const homeBtn = document.getElementById("homeBtn");
-  if (homeBtn) {
-    homeBtn.addEventListener("click", () => {
-      window.location.href = "index.html";
-    });
-  }
+  colorPicker.addEventListener("input", (e) => {
+    notepad.style.color = e.target.value;
+  });
+
+  backToNotepad.addEventListener("click", resetToNotepad);
+
+  homeBtn.addEventListener("click", () => {
+    window.location.href = "index.html";
+  });
 });

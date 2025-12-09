@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  background: black;
+  overflow-y: auto;
+  min-height: 100vh;
+}
+
+
+.video-grid {
+  display: grid;
+  width: 100vw;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  padding: 100px 10px 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+.video-box {
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  transition: opacity 0.4s ease;
+  pointer-events: auto;
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.video-box:hover {
+  opacity: 1;
+  z-index: 10;
+  background: transparent;
+}
+
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+.BI-title {
+  font-family: "chelsea-market-script", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 70px;
+  color: #ffffff;
+  text-align: center;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 100;
+  pointer-events: none;
+  animation: floatText 3s ease-in-out infinite,
+  colorPulse 5s ease-in-out infinite;
+}
+
+.nav-btn {
+  padding: 10px 20px;
+  background: #444444;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 20px auto;
+  font-size: 16px;
+  display: block;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+.nav-btn:hover {
+  background: #222222;
+}

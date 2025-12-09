@@ -1,42 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>tigershark</title>
-  <link rel="stylesheet" href="tigershark.css">
-<link rel="stylesheet" href="https://use.typekit.net/uuq7iqa.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tigershark</title>
+  <link rel="stylesheet" href="tigershark.css" />
+  <link rel="stylesheet" href="https://use.typekit.net/uuq7iqa.css" />
 </head>
 <body>
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="shark-bg.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
 
-    <video autoplay muted loop playsinline class="bg-video">
-  <source src="tigershark-bg.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+  <h1 class="tigershark-title">Tigershark Videos</h1>
 
-<h1 class="tigershark-title">Tigershark Videos</h1>
-  
   <div class="video-container">
     <div class="video-box">
-      <video controls poster="tigershark-video-1.png">
-        <source src="tigershark1.mp4" type="video/mp4">
+      <video controls poster="tigershark-video-1.jpg">
+        <source src="tigershark1.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>
 
     <div class="video-box">
-      <video controls poster="tigershark-video-2.jpg">
-        <source src="tigershark2.mp4" type="video/mp4">
+      <video controls poster="tigershark-video-2.png">
+        <source src="tigershark2.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>
 
     <div class="video-box">
-      <video controls poster="tigershark-video-3.png">
-        <source src="tigershark3.mp4" type="video/mp4">
+      <video controls poster="tigershark-video-3.jpg">
+        <source src="tigershark3.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>
   </div>
 
+  <section id="notepadSection">
+    <h2>Notes</h2>
+
+    <div class="controls">
+      <label for="colorPicker">Text Color:</label>
+      <input type="color" id="colorPicker" value="#000000" />
+      <button id="clearBtn" type="button">Clear</button>
+      <button id="submitBtn" type="button">Submit</button>
+    </div>
+
+    <textarea id="notepad" placeholder="Vent here..."></textarea>
+  </section>
+
+  <div id="messageBox" aria-live="polite"></div>
+
+  <button id="backToNotepad" class="nav-btn" type="button">
+    Back to Notepad
+  </button>
+
+  <button id="homeBtn" class="nav-btn" type="button">
+    Home
+  </button>
+
+  <script src="tigershark.js" defer></script>
 </body>
 </html>
