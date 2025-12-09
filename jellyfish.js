@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       messageBox.textContent = randomMessage;
       messageBox.style.opacity = "1";
-    }, 900);
+    }, 1000);
   });
 });
 const homeBtn = document.getElementById("homeBtn");
