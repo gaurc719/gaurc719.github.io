@@ -87,7 +87,7 @@ body > *:not(.bg-video) {
 
 .video-box:hover {
   animation-play-state: paused;
-  transform: scale(1.05);
+  transform: scale(1.25);
 }
 
 @keyframes float {
