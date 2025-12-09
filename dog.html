@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Dogs</title>
   <link rel="stylesheet" href="dog.css">
   <link rel="stylesheet" href="https://use.typekit.net/uuq7iqa.css">
 </head>
+
 <body>
     <video autoplay muted loop playsinline class="bg-video">
   <source src="dog.mp4" type="video/mp4">
@@ -13,33 +15,55 @@
 </video>
 
 <h1 class="dog-title">Dog Videos</h1>
-  
+<div class="welcome-card">
+  Welcome to the Dog room! This is a personal space to lighten your mood. The Dog room offers satisfying dog videos to destress. This is also a digital atmosphere for you to vent about your feelings and get manifestation.
+</div>
   <div class="video-container">
     <div class="video-box">
-      <video controls poster="dog-video-1.png">
+      <video controls poster="dog1.png">
         <source src="dog1.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
 
     <div class="video-box">
-      <video controls poster="dog-video-2.jpg">
+      <video controls poster="dog2.jpg">
         <source src="dog2.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
 
     <div class="video-box">
-      <video controls poster="dog-video-3.png">
+      <video controls poster="dog3.jpg">
         <source src="dog3.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
   </div>
 
-  <button id="homeBtn" class="nav-btn" type="button" onclick="window.location.href='index.html'">
-    Home
-  </button>
+  <div id="notepadSection">
+    <h2>Notes</h2>
 
+    <div class="controls">
+        <label for="colorPicker">Text Color:</label>
+        <input type="color" id="colorPicker" value="#000000">
+        <button id="clearBtn">Clear</button>
+        <button id="submitBtn">Submit</button>
+    </div>
+
+    <textarea id="notepad" placeholder="Vent here..."></textarea>
+</div>
+
+<div id="messageBox"></div>
+
+<button id="backToNotepad" class="nav-btn" style="display:none;">
+  Back to Notepad
+</button>
+
+<button id="homeBtn" class="nav-btn">
+  Home
+</button>
+<div id="messageBox"></div>
+<script src="dog.js" defer></script>
 </body>
 </html>

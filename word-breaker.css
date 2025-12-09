@@ -8,6 +8,27 @@ body {
   overflow-y: auto;
 }
 
+.word-breaker-title {
+  font-family: "tripper", sans-serif;
+  font-weight: 700;
+  font-style: bold;
+  font-size: 120px;
+  color: #ffffff;
+  text-align: center;
+  margin: 200px auto 40px;
+  animation: floatText 3s ease-in-out infinite,
+             colorPulse 5s ease-in-out infinite;
+}
+
+@keyframes floatText {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes colorPulse {
+  0%, 100% { color: #ffffff; }
+  30% { color: black; }
+}
 
 #container {
   position: relative;

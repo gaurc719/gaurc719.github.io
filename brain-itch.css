@@ -5,6 +5,33 @@ body {
   min-height: 100vh;
 }
 
+.BI-title {
+  font-family: "chelsea-market-script", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 70px;
+  color: #ffffff;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 100;
+  pointer-events: none;
+  animation: floatText 3s ease-in-out infinite,
+             colorPulse 5s ease-in-out infinite;
+}
+
+@keyframes floatText {
+  0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+  50% { transform: translate(-50%, -50%) translateY(-15px); }
+}
+
+@keyframes colorPulse {
+  0%, 100% { color: #ffffff; }
+  30% { color: black; }
+}
 
 .video-grid {
   display: grid;
@@ -44,23 +71,6 @@ video {
   height: 100%;
   object-fit: cover;
   pointer-events: none;
-}
-.BI-title {
-  font-family: "chelsea-market-script", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 70px;
-  color: #ffffff;
-  text-align: center;
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  z-index: 100;
-  pointer-events: none;
-  animation: floatText 3s ease-in-out infinite,
-  colorPulse 5s ease-in-out infinite;
 }
 
 .nav-btn {
